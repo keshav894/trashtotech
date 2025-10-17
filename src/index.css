@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Shadcn UI CSS Variables */
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222.2 84% 4.9%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 222.2 84% 4.9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+  --radius: 0.5rem;
+
+  /* Custom Eco Variables */
+  --eco-green: #22c55e;
+  --eco-dark-green: #16a34a;
+  --eco-light-green: #86efac;
+  --eco-blue: #3b82f6;
+  --eco-light-blue: #93c5fd;
+  --eco-teal: #14b8a6;
+  --eco-gray: #64748b;
+  --eco-light-gray: #f1f5f9;
+}
+
+body {
+  @apply bg-gradient-to-br from-green-50 via-blue-50 to-teal-50 text-gray-800;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Gradient Classes */
+.eco-gradient {
+  background: linear-gradient(135deg, #22c55e 0%, #14b8a6 50%, #3b82f6 100%);
+}
+
+.eco-gradient-text {
+  background: linear-gradient(135deg, #22c55e 0%, #14b8a6 50%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Component Styles */
+.eco-card {
+  @apply bg-white/80 backdrop-blur-sm border border-green-100 shadow-lg rounded-xl;
+}
+
+.eco-button {
+  @apply bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg;
+}
+
+.eco-button-secondary {
+  @apply bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg;
+}
+
+.eco-button-outline {
+  @apply border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105;
+}
+
+.map-container {
+  @apply relative overflow-hidden rounded-xl shadow-xl;
+  background: linear-gradient(45deg, #e6fffa 0%, #f0f9ff 50%, #ecfdf5 100%);
+}
+
+.waste-bin {
+  @apply relative overflow-hidden rounded-2xl shadow-2xl;
+  background: linear-gradient(145deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.impact-stat {
+  @apply bg-gradient-to-br from-white to-green-50 border border-green-200 rounded-xl p-6 shadow-lg;
+}
+
+/* Animations */
+.floating-element {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.pulse-green {
+  animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+}
+
+.eco-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(20, 184, 166, 0.1) 0%, transparent 50%);
+}
+
+/* Custom Slider Styles */
+.slider {
+  background: linear-gradient(to right, #10b981, #3b82f6);
+  border-radius: 8px;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #10b981;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.slider::-moz-range-thumb {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #10b981;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Input/Textarea Styling */
+.input {
+  @apply bg-gray-50 border-gray-300;
+}
+
+.textarea {
+  @apply bg-gray-50 border-gray-300;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
