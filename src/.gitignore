@@ -1,0 +1,34 @@
+# Node / frontend
+node_modules/
+dist/
+build/
+out/
+.vite/
+.vitepress/
+.cache/
+
+# Environment
+.env
+.env.*
+.env.local
+
+# Logs and reports
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+coverage/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Misc
+*.local
+EOF
