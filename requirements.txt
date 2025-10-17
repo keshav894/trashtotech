@@ -1,0 +1,9 @@
+# Trash n' Tech - Requirements / Notes
+# This is a JavaScript (Vite + React + Tailwind) project.
+# Recommended runtime:
+#   - Node.js >= 16.x
+#   - npm >= 8.x or yarn / pnpm
+#
+# No Python packages are required for this project.
+#
+# (This file is informational — install Node from https://nodejs.org/)
