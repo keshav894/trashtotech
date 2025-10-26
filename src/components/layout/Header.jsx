@@ -24,6 +24,18 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const scrollToEventsForm = () => {
+    const el = document.getElementById('events-form');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // fallback: navigate to the page/anchor that contains the EventForm component
+      // sets the URL hash so the browser (or your app) can land on the events section
+      window.location.hash = '#events-form';
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="fixed top-0 w-full bg-white shadow-md z-50">
       <div className="container mx-auto px-4 py-4">
@@ -50,6 +62,12 @@ const Header = () => {
               className="text-gray-700 hover:text-green-600 font-medium"
             >
               Volunteer
+            </button>
+            <button
+              onClick={scrollToEventsForm}
+              className="text-gray-700 hover:text-green-600 font-medium"
+            >
+              Events
             </button>
             <button
               onClick={scrollToCleanupForm}

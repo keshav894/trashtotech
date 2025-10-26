@@ -5,6 +5,7 @@ import SmartWasteBin from "../components/sections/SmartWasteBin";
 import ImpactStats from "../components/sections/ImpactStats";
 import Footer from "../components/layout/Footer"; // Correct path to Footer component
 import React, { useState } from "react";
+import EventForm from "../components/sections/EventForm";
 
 const HomePage = () => {
   const [markers, setMarkers] = useState([
@@ -64,6 +65,7 @@ const HomePage = () => {
           selectedPark={selectedPark}
         />
         <SmartWasteBin />
+        <EventForm />
       </main>
 
       {/* Footer at the bottom */}
