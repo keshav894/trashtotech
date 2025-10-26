@@ -7,7 +7,7 @@ function App() {
     <div className="min-h-screen">
       <Header />
       <HomePage />
-    </div>
+ƒ    </div>
   );
 }
 

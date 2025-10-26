@@ -5,26 +5,26 @@ const ImpactStats = () => {
   const stats = [
     {
       icon: Users,
-      number: "15",
+      number: "50",
       label: "Volunteers",
       color: "text-green-600"
     },
     {
       icon: MapPin,
-      number: "1",
+      number: "5",
       label: "Park Cleaned",
       sublabel: "Oakridge Park",
       color: "text-blue-600"
     },
     {
       icon: Trash2,
-      number: "15",
+      number: "35",
       label: "kg of Trash Collected",
       color: "text-purple-600"
     },
     {
       icon: Clock,
-      number: "5.6",
+      number: "15.6",
       label: "kg of Organic Waste",
       sublabel: "Composted",
       color: "text-orange-600"
